@@ -150,27 +150,56 @@
                 </div> 
             </div>
 
-            <div class="form-floating">
-                <textarea class="form-control my-1 border border-top-0 border-start-0 border-end-0" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Name</label>
-              </div>
+            <form class="row g-3">
+                <div class="col-md-3">
+                  <label for="validation-FirstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validation-FirstName" placeholder="Mario" required>
+                </div>
 
-              <div class="form-floating">
-                <textarea class="form-control my-1 border border-top-0 border-start-0 border-end-0" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Email Address</label>
-              </div>
+                <div class="col-md-3">
+                  <label for="validation-LastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="validation-LastName" placeholder="Rossi" required>
+                </div>
 
-              <div class="form-floating">
-                <textarea class="form-control my-1 border border-top-0 border-start-0 border-end-0" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Phone Number</label>
-              </div>
+                <div class="col-md-3">
+                  <label for="validationEmail" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <input type="email" class="form-control" id="validationEmail" aria-describedby="validationEmailFeedback" placeholder="name@example.com" required>
+                  </div>
+                </div>
 
-              <div class="form-floating">
-                <textarea class="form-control my-1 border border-top-0 border-start-0 border-end-0" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Message</label>
-              </div>
+                <div class="col-md-3">
+                  <label for="validationPhoneNumber" class="form-label">Phone Number</label>
+                  <input type="number" class="form-control" id="validationPhoneNumber" aria-describedby="validationPhoneNumberFeedback" placeholder="+393330000000" required>
+                  <div id="validationPhoneNumberFeedback" class="invalid-feedback">
+                    Please provide a valid phone number.
+                  </div>
+                </div>
 
-              <button type="button" class="btn btn-success text-white my-3">Send</button>
+                <div class="col-md-12">
+                    <label for="validationMessage" class="form-label">Message</label>
+                    <textarea class="form-control" id="validationMessage" aria-describedby="validationMessageFeedback" rows="5" placeholder="Insert your message here" required></textarea>
+                    <div id="validationMessageFeedback" class="invalid-feedback">
+                      Please provide a valid phone number.
+                    </div>
+                  </div>
+                
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Check-box" aria-describedby="Check-boxFeedback" required>
+                    <label class="form-check-label" for="Check-box">
+                      Agree to terms and conditions
+                    </label>
+                    <div id="Check-boxFeedback" class="Check-box">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center my-3">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+              </form>
         </div>     
     </section>
 
@@ -178,7 +207,7 @@
         <div class="row bg-dark py-3 g-0">
             <div class="col-1"></div>
             <div class="col-10">
-                <div class="row justify-content-between text-white">
+                <div class="row align-items-center justify-content-between text-white">
                     <div class="col-2">
                         <p class="text-center m-0">LOCATION</p>
                         <p class="text-center m-0">2215 John Daniel Drive Clark, MO</p>
